@@ -1,0 +1,29 @@
+{
+    "name": "mobilecashout/trusted_proxies",
+    "description": "List of known trusted proxies",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Matiss Treinis",
+            "email": "matiss@mobilecashout.com"
+        }
+    ],
+    "require": {
+        "symfony/http-foundation": ">=2.3"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.5",
+        "addvilz/phpspec-cover": "^0.1.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "MobileCashout\\": "src/"
+        }
+    },
+    "scripts": {
+        "build": [
+            "MobileCashout\\TrustedProxies\\Generator::generate"
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+extensions:
+    - Addvilz\PhpSpecCover\Extension
+
+suites:
+  truested_proxies:
+    namespace: MobileCashout\TrustedProxies
