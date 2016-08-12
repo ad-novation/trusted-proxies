@@ -12,7 +12,7 @@ class Generator
         '_netblocks3.google.com',
     ];
 
-    const TARGET_FORMAT = __DIR__ . '/Generated/%s.%s';
+    const TARGET_FORMAT = __DIR__.'/Generated/%s.%s';
     const FILE_FORMAT = '<?php return %s;';
 
     public static function generate(Event $event)
@@ -20,8 +20,11 @@ class Generator
         $all = array_merge(
             self::getForGoogle(),
             self::getForOpera(),
-            self::getStaticForOpera()
+            self::getStaticForOpera(),
+            self::getStaticForOnavo()
         );
+
+        sort($all);
 
         file_put_contents(sprintf(self::TARGET_FORMAT, 'data', 'php'), sprintf(self::FILE_FORMAT, var_export($all, true)));
         file_put_contents(sprintf(self::TARGET_FORMAT, 'data', 'json'), json_encode($all));
@@ -117,6 +120,21 @@ class Generator
             '2001:4c28:4000::/36',
             '2001:4c28:a000::/40',
             '2620:117:c000::/48',
+        ];
+    }
+
+    private static function getStaticForOnavo()
+    {
+        return [
+            '147.75.208.0/20',
+            '147.75.208.0/24',
+            '147.75.209.0/24',
+            '185.89.216.0/22',
+            '185.89.216.0/24',
+            '185.89.217.0/24',
+            '185.89.218.0/24',
+            '185.89.219.0/24',
+            '2a03:83e0::/32',
         ];
     }
 }

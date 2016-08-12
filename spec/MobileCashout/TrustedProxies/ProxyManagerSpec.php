@@ -40,4 +40,9 @@ class ProxyManagerSpec extends ObjectBehavior
     {
         $this->isIpv6('probably invalid')->shouldBe(false);
     }
+
+    public function it_returns_cidrs()
+    {
+        $this->getCidrs()->shouldBe(['3.3.3.0/24']);
+    }
 }

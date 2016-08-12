@@ -45,4 +45,12 @@ class ProxyManager
     {
         return (bool) filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6);
     }
+
+    /**
+     * @return array
+     */
+    public function getCidrs()
+    {
+        return $this->cidrs;
+    }
 }
