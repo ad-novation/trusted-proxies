@@ -1,9 +1,9 @@
 # A list of somewhat-trusted proxy CIDR's
 
-Might be used to establish source of traffic.
+This repository contains a PHP library and generated data set of known proxy CIDR's that
+ belong to content compression and delivery networks.
 
-See `src/` for comprehensive documentation :)
-
+Currently this list includes relatively up to date information about Opera, GCP and Onavo.
 
 ## License
 

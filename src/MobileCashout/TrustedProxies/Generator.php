@@ -87,7 +87,6 @@ class Generator
 
     private static function getStaticForOpera()
     {
-        // Networks we know about internally.
         return [
             '37.228.104.0/21',
             '37.228.105.0/24',
