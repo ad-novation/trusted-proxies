@@ -24,6 +24,8 @@ class Generator
             self::getStaticForOnavo()
         );
 
+        $all = array_unique($all);
+
         sort($all);
 
         file_put_contents(sprintf(self::TARGET_FORMAT, 'data', 'php'), sprintf(self::FILE_FORMAT, var_export($all, true)));
