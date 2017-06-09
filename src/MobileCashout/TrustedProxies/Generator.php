@@ -22,7 +22,8 @@ class Generator
             self::getForOpera(),
             self::getStaticForOpera(),
             self::getStaticForOnavo(),
-            self::getStaticForClaudmosa()
+            self::getStaticForClaudmosa(),
+            self::getStaticForTrueInternationalGateway()
         );
 
         $all = array_unique($all);
@@ -154,6 +155,22 @@ class Generator
             '107.178.34.0/23',
             '107.178.36.0/22',
             '107.178.40.0/21',
+        ];
+    }
+
+    /**
+     * TIG TH Gateway
+     */
+    private static function getStaticForTrueInternationalGateway()
+    {
+        return [
+            '27.123.17.1/32',
+            '27.123.17.2/31',
+            '27.123.17.4/30',
+            '27.123.17.8/29',
+            '27.123.17.16/28',
+            '27.123.17.32/27',
+            '27.123.17.64/26',
         ];
     }
 }
