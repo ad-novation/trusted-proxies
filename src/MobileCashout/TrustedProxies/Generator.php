@@ -23,7 +23,9 @@ class Generator
             self::getStaticForOpera(),
             self::getStaticForOnavo(),
             self::getStaticForClaudmosa(),
-            self::getStaticForTrueInternationalGateway()
+            self::getStaticForTrueInternationalGateway(),
+            self::getStaticForEmirnet(),
+            self::getStaticForUnitedOnline()
         );
 
         $all = array_unique($all);
@@ -171,6 +173,29 @@ class Generator
             '27.123.17.16/28',
             '27.123.17.32/27',
             '27.123.17.64/26',
+        ];
+    }
+
+    private static function getStaticForEmirnet()
+    {
+        return [
+            '195.229.242.52/32',
+            '195.229.242.53/32',
+            '195.229.242.54/32',
+            '195.229.242.55/32',
+            '195.229.242.56/32',
+            '195.229.242.57/32',
+            '195.229.242.58/32',
+        ];
+    }
+
+    private static function getStaticForUnitedOnline()
+    {
+        return [
+            '64.136.26.0/24',
+            '64.136.27.0/24',
+            '64.136.47.12/32',
+            '64.136.55.12/32',
         ];
     }
 }
