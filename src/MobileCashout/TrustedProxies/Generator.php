@@ -12,7 +12,7 @@ class Generator
         '_netblocks3.google.com',
     ];
 
-    const TARGET_FORMAT = __DIR__.'/Generated/%s.%s';
+    const TARGET_FORMAT = __DIR__ . '/Generated/%s.%s';
     const FILE_FORMAT = '<?php return %s;';
 
     public static function generate(Event $event)
@@ -21,7 +21,8 @@ class Generator
             self::getForGoogle(),
             self::getForOpera(),
             self::getStaticForOpera(),
-            self::getStaticForOnavo()
+            self::getStaticForOnavo(),
+            self::getStaticForClaudmosa()
         );
 
         $all = array_unique($all);
@@ -105,6 +106,7 @@ class Generator
             '107.167.116.0/22',
             '107.167.126.0/24',
             '107.167.127.0/24',
+            '119.81.80.64/27',
             '141.0.12.0/22',
             '185.26.180.0/22',
             '185.26.180.0/23',
@@ -133,6 +135,25 @@ class Generator
             '185.89.218.0/24',
             '185.89.219.0/24',
             '2a03:83e0::/32',
+        ];
+    }
+
+    // Cloudmosa Puffin accelerator
+    private static function getStaticForClaudmosa()
+    {
+        return [
+            '107.178.32.1/32',
+            '107.178.32.2/31',
+            '107.178.32.4/30',
+            '107.178.32.8/29',
+            '107.178.32.16/28',
+            '107.178.32.32/27',
+            '107.178.32.64/26',
+            '107.178.32.128/25',
+            '107.178.33.0/24',
+            '107.178.34.0/23',
+            '107.178.36.0/22',
+            '107.178.40.0/21',
         ];
     }
 }
