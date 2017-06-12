@@ -22,7 +22,7 @@ class Generator
             self::getForOpera(),
             self::getStaticForOpera(),
             self::getStaticForOnavo(),
-            self::getStaticForClaudmosa(),
+            self::getStaticForCloudmosa(),
             self::getStaticForTrueInternationalGateway(),
             self::getStaticForEmirnet(),
             self::getStaticForUnitedOnline()
@@ -142,7 +142,7 @@ class Generator
     }
 
     // Cloudmosa Puffin accelerator
-    private static function getStaticForClaudmosa()
+    private static function getStaticForCloudmosa()
     {
         return [
             '107.178.32.1/32',
