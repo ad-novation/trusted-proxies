@@ -131,6 +131,7 @@ class Generator
     private static function getStaticForCloudmosa()
     {
         return [
+            '45.33.128.0/20',
             '107.178.32.0/20',
         ];
     }
