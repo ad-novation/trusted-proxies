@@ -25,7 +25,8 @@ class Generator
             self::getStaticForCloudmosa(),
             self::getStaticForTrueInternationalGateway(),
             self::getStaticForEmirnet(),
-            self::getStaticForUnitedOnline()
+            self::getStaticForUnitedOnline(),
+            self::getStaticForQuantil()
         );
 
         $all = array_unique($all);
@@ -97,24 +98,11 @@ class Generator
             '37.228.104.0/21',
             '82.145.208.0/20',
             '91.203.96.0/22',
-            '107.167.96.0/20',
-            '107.167.112.0/21',
-            '107.167.123.0/24',
-            '107.167.125.0/24',
-            '107.167.126.0/23',
+            '107.167.96.0/19',
             '119.81.80.64/27',
-            '141.0.12.0/22',
             '185.26.180.0/22',
-            '195.189.143.0/24',
             '2001:4c28::/32',
-            '2001:4c28:1::/48',
-            '2001:4c28:20::/48',
-            '2001:4c28:194::/48',
-            '2001:4c28:1000::/36',
-            '2001:4c28:3000::/48',
-            '2001:4c28:4000::/36',
-            '2001:4c28:a000::/40',
-            '2620:117:c000::/48',
+            '2620:117:c000::/40',
         ];
     }
 
@@ -163,4 +151,19 @@ class Generator
             '64.136.55.12/32',
         ];
     }
+
+    /**
+     * Quantil CDN, used by Mobile Carriers in India
+     */
+    private static function getStaticForQuantil()
+    {
+        return [
+            '8.37.224.0/20',
+            '157.185.128.0/21',
+            '157.185.191.0/24',
+            '168.235.192.0/20',
+            '185.119.40.0/22',
+        ];
+    }
+
 }
