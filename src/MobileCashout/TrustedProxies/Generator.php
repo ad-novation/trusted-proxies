@@ -26,7 +26,8 @@ class Generator
             self::getStaticForTrueInternationalGateway(),
             self::getStaticForEmirnet(),
             self::getStaticForUnitedOnline(),
-            self::getStaticForQuantil()
+            self::getStaticForQuantil(),
+            self::getStaticForYandex()
         );
 
         $all = array_unique($all);
@@ -163,6 +164,26 @@ class Generator
             '157.185.191.0/24',
             '168.235.192.0/20',
             '185.119.40.0/22',
+        ];
+    }
+
+    /**
+     * Yandex browser Turbo mode
+     */
+    private static function getStaticForYandex()
+    {
+        return [
+            '37.140.189.192/26',
+            '95.108.133.192/26',
+            '95.108.141.32/27',
+            '95.108.141.64/27',
+            '95.108.225.192/26',
+            '95.108.244.32/27',
+            '95.108.244.64/27',
+            '95.213.218.32/27',
+            '95.213.218.64/28',
+            '95.213.218.160/27',
+            '95.213.218.192/26',
         ];
     }
 

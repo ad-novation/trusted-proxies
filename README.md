@@ -12,6 +12,7 @@ Currently this list includes relatively up to date information about :
  * Emirnet
  * United Online
  * Quantil
+ * Yandex (Yandex.Browser Turbo Mode)
 
 ## License
 
